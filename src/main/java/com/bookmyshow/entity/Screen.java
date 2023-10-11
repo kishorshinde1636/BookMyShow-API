@@ -2,10 +2,12 @@ package com.bookmyshow.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -32,13 +34,14 @@ public class Screen {
 
 	private ScreenStatus screenStatus;
 
-	@OneToMany
+	@OneToMany(mappedBy = "screen", cascade = CascadeType.ALL)
 	private List<Seat> seats;
 	private int noOfClassicSeat;
 	private int noOfPlatinumSeat;
 	private int noOfGoldSeat;
 
 	@ManyToOne
+	@JoinColumn
 	private Theatre theatre;
 
 }

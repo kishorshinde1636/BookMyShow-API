@@ -24,7 +24,7 @@ public class Customer {
 	private String customerPassword;
 	private String customerEmail;
 
-	@OneToMany
+	@OneToMany(mappedBy = "customer")
 	private List<Ticket> tickets;
 
 }

@@ -1,6 +1,7 @@
 package com.bookmyshow.dto;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import com.bookmyshow.enums.Genre;
 
@@ -19,7 +20,7 @@ public class MovieDto {
 
 	private Genre genre2;
 	private Genre genre3;
-	private LocalDate movieDuration;
+	private LocalTime movieDuration;
 	private String language;
 	private String movieDescription;
 }

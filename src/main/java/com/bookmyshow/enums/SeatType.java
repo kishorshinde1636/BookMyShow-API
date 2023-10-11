@@ -4,6 +4,6 @@ public enum SeatType {
 
 	CLASSIC,
 	GOLD,
-	PREMIUM
+	PLATINUM
 
 }
